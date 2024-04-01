@@ -1,7 +1,15 @@
 namespace JogoSarah;
 public class Personagens
 {
-  double fome;
-
+  protected double fome;
+  protected double tristeza;
+  protected double sede;
     
+    public Personagens()
+    {
+      fome=0.5;
+      tristeza=1;
+      sede=0.7;
+    }
+
 }

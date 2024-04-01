@@ -2,7 +2,7 @@ namespace JogoSarah;
 public class Abelha:Personagens
 {
 
-    public Abelha ()
+    public Abelha () : base()
     {
 
     }

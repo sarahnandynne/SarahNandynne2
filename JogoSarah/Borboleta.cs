@@ -1,8 +1,8 @@
 namespace JogoSarah;
-public class Borboleta:Personagens
+public class Borboleta : Personagens
 {
 
-    public Borboleta ()
+    public Borboleta () : base()
     {
 
     }
