@@ -3,40 +3,32 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="JogoSarah.MainPage"
              Shell.NavBarIsVisible="false">
-
 <Grid>
- <Grid.RowDefinitions>
- <RowDefinition Height="*"/>
- <RowDefinition Height="*"/>
- <RowDefinition Height="*"/>
-</Grid.RowDefinitions>
+<Image Source="fundo.png"
+       Aspect="AspectFill"/>
 
-<Grid.ColumnDefinitions>
- <ColumnDefinition Width="*"/>
- <ColumnDefinition Width="*"/>
-</Grid.ColumnDefinitions>
-
-<Image Source="fundo.jpg"
+ <Image x:Name="personagens"
+        Source="abelha.png"
         Aspect="AspectFill"
-        Grid.Row="1"
-        Grid.Column="0"
-        Grid.ColumnSpan="2"/>
+        Margin="100,0"
+        VerticalOptions="End"/>
+
+<Frame VerticalOptions="Start"
+        Margin="30,50"
+        BackgroundColor="#FFFACD"
+        HeightRequest="200"
+        CornerRadius="20">
+<ProgressBar x:Name="progressBar"/>
+
+</Frame>
 
 <Label Text="ZEE BEE"
        TextColor="Black"
-       Margin="20,30,20,30"
-       FontSize="75"
-       Grid.Row="1"
-        Grid.Column="0"
-        FontFamily="Sunflower"
-        Grid.ColumnSpan="2"
+       FontSize="25"
+       FontFamily="Sunflower"
        HorizontalOptions="Fill"
-       HorizontalTextAlignment="Center"
-       VerticalOptions="Start"/> 
+       VerticalOptions="Center"
+       HorizontalTextAlignment="Center"/> 
 
-<Image x:Name="personagens"/>
-
-<ProgressBar x:Name="progressBar"/>
-                  
-</Grid>
+ </Grid>
 </ContentPage>
