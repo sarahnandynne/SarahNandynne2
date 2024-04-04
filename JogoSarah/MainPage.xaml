@@ -65,29 +65,37 @@
 </Frame>
 
                 <Frame x:Name="botões"
-                       Margin="220"
-                       Background="#FFFACD"
+                       Padding="10,5"
+                       Margin="10,220,10,0"
+                       BackgroundColor="#FFFACD"
                        VerticalOptions="Start"
-                       WidthRequest="100"
-                       HeightRequest="50">
+                       HeightRequest="60">
                 <Grid>
                         <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="50"/>
-                                <ColumnDefinition Width="50"/>
-                                <ColumnDefinition Width="50"/>
-                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
 
                 <ImageButton Source="seta.png" 
+                             BackgroundColor="#FFFACD"
+                             Aspect="AspectFit"
                              Grid.Column="0"/>
 
-                <ImageButton Source="gota.png" 
+                <ImageButton Source="gota.png"
+                             BackgroundColor="#FFFACD"
+                             Aspect="AspectFit"
                              Grid.Column="1"/>
 
                 <ImageButton Source="comida.png" 
+                             BackgroundColor="#FFFACD"
+                             Aspect="AspectFit"
                              Grid.Column="2"/>
 
                 <ImageButton Source="bola.png" 
+                             BackgroundColor="#FFFACD"
+                             Aspect="AspectFit"
                              Grid.Column="3"/>
 
                                 <!-- Coloca aqui essas merdas suas -->
