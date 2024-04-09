@@ -1,4 +1,6 @@
-﻿namespace JogoSarah;
+﻿using Microsoft.Maui.Controls;
+
+namespace JogoSarah;
 
 public partial class MainPage : ContentPage
 {
@@ -17,7 +19,25 @@ public partial class MainPage : ContentPage
 		atual = ladybug;
 
 		personagens.Source = atual.GetArquivo();
+
+		var timer =
+		Application.Current.Dispatcher.CreateTimer();
+		timer.Interval = TimeSpan.FromSeconds(5);
+		timer.Tick += (s,e) => PassouTempo();
+		timer.Start();
 	}
+		void PassouTempo()
+		{
+			atual.SetSede(atual.GetSede() - 0.1);
+			pbAgua.Progress=atual.GetSede();
+
+			atual.SetFome(atual.GetFome() - 0.1);
+			pbComida.Progress=atual.GetFome();
+
+			atual.SetTristeza(atual.GetTristeza() - 0.1);
+			pbTristeza.Progress=atual.GetTristeza();
+		}
+	
 
 
 	void Mudar(object sender, EventArgs args)
