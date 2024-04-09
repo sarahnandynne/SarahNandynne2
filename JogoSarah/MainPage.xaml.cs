@@ -19,15 +19,20 @@ public partial class MainPage : ContentPage
 		atual = ladybug;
 
 		personagens.Source = atual.GetArquivo();
+		pbAgua.Progress=atual.GetSede();
+		pbComida.Progress=atual.GetFome();
+		pbTristeza.Progress=atual.GetTristeza();
 
 		var timer =
 		Application.Current.Dispatcher.CreateTimer();
-		timer.Interval = TimeSpan.FromSeconds(5);
+		timer.Interval = TimeSpan.FromSeconds(3);
 		timer.Tick += (s,e) => PassouTempo();
 		timer.Start();
 	}
 		void PassouTempo()
 		{
+			var estavaMorto = atual.GetMorto();
+
 			atual.SetSede(atual.GetSede() - 0.1);
 			pbAgua.Progress=atual.GetSede();
 
@@ -36,6 +41,9 @@ public partial class MainPage : ContentPage
 
 			atual.SetTristeza(atual.GetTristeza() - 0.1);
 			pbTristeza.Progress=atual.GetTristeza();
+
+			if (estavaMorto != atual.GetMorto())
+				personagens.Source = atual.GetArquivo();
 		}
 	
 

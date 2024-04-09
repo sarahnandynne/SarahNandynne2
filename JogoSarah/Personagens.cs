@@ -23,6 +23,11 @@ public class Personagens
     else 
       return arquivo;
   }
+
+  public bool GetMorto()
+  {
+    return morto;
+  }
     
 
   public double GetSede()
@@ -41,22 +46,22 @@ public double GetTristeza()
 
   public void SetSede( double s)
   {
-    if (s>1)
-    sede = 1;
-    else if (s<0)
+    if (s > 1)
+      sede = 1;
+    else if (s <= 0)
     {
       sede = 0;
       morto = true;
     }
     else
-    sede = s;
+      sede = s;
   }
 
 public void SetTristeza(double t)
   {
     if (t>1)
     tristeza = 1;
-    else if (t<0)
+    else if (t<=0)
     {
       tristeza = 0;
       morto = true;
@@ -68,7 +73,7 @@ public void SetTristeza(double t)
   {
     if (f>1)
     fome = 1;
-    else if (f<0)
+    else if (f<=0)
     {
       fome = 0;
       morto = true;
