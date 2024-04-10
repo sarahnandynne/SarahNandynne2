@@ -45,7 +45,16 @@ public partial class MainPage : ContentPage
 			if (estavaMorto != atual.GetMorto())
 				personagens.Source = atual.GetArquivo();
 		}
-	
+		
+		void GameOver()
+		{
+			if (butterfly.GetMorto() &&
+				zeebee.GetMorto() &&
+				ladybug.GetMorto())
+			{
+			Application.Current.MainPage = new GameOverPage();
+			}
+		}
 
 
 	void Mudar(object sender, EventArgs args)
@@ -78,6 +87,7 @@ public partial class MainPage : ContentPage
 		atual.SetTristeza(atual.GetTristeza() + 0.1);
 		pbTristeza.Progress=atual.GetTristeza();
 	}
+
 
 }
 

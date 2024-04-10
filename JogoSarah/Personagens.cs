@@ -51,10 +51,13 @@ public double GetTristeza()
     else if (s <= 0)
     {
       sede = 0;
-      morto = true;
     }
     else
       sede = s;
+    
+    if (sede <= 0.1)
+    morto = true;
+
   }
 
 public void SetTristeza(double t)
@@ -64,10 +67,12 @@ public void SetTristeza(double t)
     else if (t<=0)
     {
       tristeza = 0;
-      morto = true;
     }
     else
     tristeza = t;
+
+    if (sede <= 0.1)
+    morto = true;
   }
   public void SetFome( double f)
   {
@@ -76,9 +81,10 @@ public void SetTristeza(double t)
     else if (f<=0)
     {
       fome = 0;
-      morto = true;
     }
     else
     fome = f;
+    if (sede <= 0.1)
+    morto = true;
   }
 }
